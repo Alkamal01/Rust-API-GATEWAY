@@ -31,19 +31,19 @@ Rusta is a production-ready API gateway that intelligently routes traffic to you
 
 ```bash
 # Pull and run the latest image
-docker pull ghcr.io/danielsarmiento04/rusta:latest
+docker pull ghcr.io/Alkamal01/rusta:latest
 
 docker run -d \
   -p 5900:5900 \
   -v $(pwd)/config.json:/app/config.json:ro \
-  ghcr.io/danielsarmiento04/rusta:latest
+  ghcr.io/Alkamal01/rusta:latest
 ```
 
 ### Build from Source
 
 ```bash
 # Clone the repository
-git clone https://github.com/DanielSarmiento04/Rust-API-GATEWAY.git
+git clone https://github.com/Alkamal01/Rust-API-GATEWAY.git
 cd Rust-API-GATEWAY
 
 # Run the gateway
@@ -186,7 +186,7 @@ MIT License - see [LICENSE](LICENSE) file.
 
 ## Author
 
-**Daniel Sarmiento** - [GitHub](https://github.com/DanielSarmiento04)
+**Kamal Aliyu** - [GitHub](https://github.com/Alkamal01)
 
 ---
 
