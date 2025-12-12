@@ -1,0 +1,50 @@
+# Build artifacts
+target/
+**/target/
+
+# Git
+.git/
+.gitignore
+.github/
+
+# Docker
+Dockerfile*
+docker-compose*
+compose.y*ml
+.dockerignore
+
+# IDE
+.vscode/
+.idea/
+**/.DS_Store
+
+# Documentation (not needed in container)
+*.md
+!config.json
+docs/
+
+# Development files
+.env
+.env.*
+dev.sh
+run.sh
+build.sh
+fix_*.sh
+
+# Test files
+tests/
+**/tests/
+
+# Examples
+examples/
+
+# Temporary files
+*.log
+*.tmp
+*.swp
+*~
+
+# Package metadata not needed for build
+LICENSE
+llm.txt
+
