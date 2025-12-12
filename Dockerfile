@@ -23,8 +23,8 @@ COPY crates/ ./crates/
 RUN --mount=type=cache,target=/app/target/ \
     --mount=type=cache,target=/usr/local/cargo/git/db \
     --mount=type=cache,target=/usr/local/cargo/registry/ \
-    cargo build --release --bin kairos-gateway && \
-    cp ./target/release/kairos-gateway /usr/local/bin/kairos-gateway
+    cargo build --release --bin rusta-gateway && \
+    cp ./target/release/rusta-gateway /usr/local/bin/rusta-gateway
 
 ################################################################################
 # Create a minimal runtime stage using Debian slim
@@ -40,7 +40,7 @@ RUN apt-get update && apt-get install -y \
 COPY --from=build /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 
 # Copy the compiled binary
-COPY --from=build /usr/local/bin/kairos-gateway /usr/local/bin/kairos-gateway
+COPY --from=build /usr/local/bin/rusta-gateway /usr/local/bin/rusta-gateway
 
 # Create non-root user
 RUN useradd -m -u 65532 nonroot
@@ -58,4 +58,4 @@ WORKDIR /app
 EXPOSE 5900
 
 # Use exec form for better signal handling
-ENTRYPOINT ["/usr/local/bin/kairos-gateway"]
+ENTRYPOINT ["/usr/local/bin/rusta-gateway"]

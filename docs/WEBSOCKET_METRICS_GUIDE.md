@@ -2,7 +2,7 @@
 
 ## Overview
 
-Kairos-rs provides a WebSocket endpoint for real-time metrics streaming, allowing clients to receive live updates about gateway performance without polling.
+Rusta provides a WebSocket endpoint for real-time metrics streaming, allowing clients to receive live updates about gateway performance without polling.
 
 ## Endpoint
 

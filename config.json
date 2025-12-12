@@ -15,7 +15,7 @@
     "burst_allowance": 20,
     "window_type": "SlidingWindow",
     "enable_redis": false,
-    "redis_key_prefix": "kairos_rl"
+    "redis_key_prefix": "Rusta_rl"
   },
   "routers": [
     {

@@ -1,0 +1,36 @@
+[package]
+name = "rusta-cli"
+version = "0.2.11"
+edition = "2021"
+description = "Command-line interface for Rusta API Gateway management"
+license = "MIT"
+authors = ["Daniel Sarmiento <josedanielsarmiento219@gmail.com>"]
+repository = "https://github.com/Alkamal01/Rust-API-GATEWAY"
+keywords = ["api-gateway", "cli", "management", "configuration"]
+categories = ["command-line-utilities", "web-programming"]
+
+[[bin]]
+name = "rusta"
+path = "src/main.rs"
+
+[dependencies]
+# Local dependencies
+rusta-rs = { version = "0.2.10", path = "../rusta-rs" }
+rusta-client = { version = "0.2.10", path = "../rusta-client" }
+
+# Workspace dependencies
+clap.workspace = true
+console.workspace = true
+indicatif.workspace = true
+tokio.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+reqwest.workspace = true
+thiserror.workspace = true
+log.workspace = true
+chrono.workspace = true
+
+# CLI-specific dependencies
+tabled = "0.15"
+colored = "2.0"
+dialoguer = "0.11"

@@ -1,12 +1,12 @@
 version: '3.8'
 
 services:
-  kairos-gateway:
+  rusta-gateway:
     build:
       context: .
       dockerfile: Dockerfile
-    image: kairos-rs:latest
-    container_name: kairos-gateway
+    image: rusta:latest
+    container_name: rusta-gateway
     ports:
       - "5900:5900"
     volumes:
@@ -14,27 +14,25 @@ services:
       - ./config.json:/app/config.json:ro
     environment:
       - RUST_LOG=info
-      - KAIROS_HOST=0.0.0.0
-      - KAIROS_PORT=5900
+      - RUSTA_HOST=0.0.0.0
+      - RUSTA_PORT=5900
     restart: unless-stopped
     networks:
-      - kairos-network
+      - rusta-network
 
-
-  kairps-ui:
+  rusta-ui:
     build:
       # Use repository root as build context so the UI Dockerfile can access
       # workspace-level files (Cargo.toml) and the full workspace source.
       context: .
-      dockerfile: crates/kairos-ui/Dockerfile
-    image: kairos-ui:latest
-    container_name: kairos-ui
+      dockerfile: crates/rusta-ui/Dockerfile
+    image: rusta-ui:latest
+    container_name: rusta-ui
     ports:
       - "8080:80"
     restart: unless-stopped
     networks:
-      - kairos-network
-
+      - rusta-network
   # Optional: WebSocket test backend
   # ws-backend:
   #   build:
@@ -44,8 +42,8 @@ services:
   #   ports:
   #     - "3000:3000"
   #   networks:
-  #     - kairos-network
+  #     - rusta-network
 
 networks:
-  kairos-network:
+  rusta-network:
     driver: bridge

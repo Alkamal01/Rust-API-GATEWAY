@@ -1,12 +1,12 @@
-# Postman Testing Guide for Kairos-rs
+# Postman Testing Guide for Rusta
 
-This guide provides complete examples for testing Kairos-rs gateway using Postman with the current configuration.
+This guide provides complete examples for testing Rusta gateway using Postman with the current configuration.
 
 ## 🚀 Quick Setup
 
-1. **Start Kairos-rs Gateway:**
+1. **Start Rusta Gateway:**
    ```bash
-   cd kairos-rs
+   cd rusta
    cargo run
    ```
    Server runs on `http://localhost:5900`
@@ -128,7 +128,7 @@ Use [jwt.io](https://jwt.io) with these settings:
   "sub": "1234567890",
   "iat": 1516239022,
   "exp": 9999999999,
-  "iss": "kairos-gateway",
+  "iss": "Rusta-gateway",
   "aud": "api-clients"
 }
 ```
@@ -175,8 +175,8 @@ You can import this collection directly into Postman:
 ```json
 {
   "info": {
-    "name": "Kairos-rs API Gateway Tests",
-    "description": "Test collection for Kairos-rs gateway functionality",
+    "name": "Rusta API Gateway Tests",
+    "description": "Test collection for Rusta gateway functionality",
     "version": "1.0.0"
   },
   "item": [
@@ -272,7 +272,7 @@ You can import this collection directly into Postman:
 **Common Issues:**
 
 1. **Connection Refused:**
-   - Make sure Kairos-rs is running: `cargo run`
+   - Make sure Rusta is running: `cargo run`
    - Check it's listening on port 5900
 
 2. **JWT Authentication Fails:**

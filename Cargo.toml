@@ -1,11 +1,11 @@
 [workspace]
 resolver = "2"
 members = [
-    "crates/kairos-rs",
-    "crates/kairos-gateway", 
-    "crates/kairos-cli",
-    "crates/kairos-ui",
-    "crates/kairos-client"
+    "crates/rusta-rs",
+    "crates/rusta-gateway", 
+    "crates/rusta-cli",
+    "crates/rusta-ui",
+    "crates/rusta-client"
 ]
 
 # Shared workspace dependencies

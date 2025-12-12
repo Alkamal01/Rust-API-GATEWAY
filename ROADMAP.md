@@ -1,4 +1,4 @@
-# Kairos-rs Development Roadmap
+# Rusta Development Roadmap
 
 > **Version**: 0.2.12  
 > **Last Updated**: November 7, 2025  
@@ -50,7 +50,7 @@
 
 ## What is this?
 
-This roadmap shows what we're planning to build for Kairos-rs. It's honest about current state and future plans.
+This roadmap shows what we're planning to build for Rusta. It's honest about current state and future plans.
 
 **Current Reality**: We have a production-ready HTTP gateway with JWT auth, rate limiting, circuit breakers, metrics, **and a modern web-based admin interface**.
 
@@ -341,6 +341,6 @@ This roadmap will evolve based on:
 
 ---
 
-**Questions about the roadmap?** [Open an issue](https://github.com/DanielSarmiento04/kairos-rs/issues) and let's discuss!
+**Questions about the roadmap?** [Open an issue](https://github.com/Alkamal01/rusta/issues) and let's discuss!
 
 *This roadmap reflects our current best thinking, but software development is unpredictable. Features may be delayed, changed, or dropped based on what we learn.*

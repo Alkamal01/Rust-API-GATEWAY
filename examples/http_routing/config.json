@@ -2,7 +2,7 @@
     "version": 1,
     "jwt": {
         "secret": "your-super-secure-jwt-secret-key-must-be-at-least-32-characters-long",
-        "issuer": "kairos-gateway",
+        "issuer": "rusta-gateway",
         "audience": "api-clients",
         "required_claims": [
             "sub",

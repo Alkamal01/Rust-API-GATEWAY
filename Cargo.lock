@@ -2065,120 +2065,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "kairos-cli"
-version = "0.2.11"
-dependencies = [
- "chrono",
- "clap",
- "colored",
- "console",
- "dialoguer",
- "indicatif",
- "kairos-client",
- "kairos-rs",
- "log",
- "reqwest",
- "serde",
- "serde_json",
- "tabled",
- "thiserror 1.0.69",
- "tokio",
-]
-
-[[package]]
-name = "kairos-client"
-version = "0.2.11"
-dependencies = [
- "chrono",
- "futures-util",
- "gloo-net 0.5.0",
- "js-sys",
- "kairos-rs",
- "log",
- "rand 0.8.5",
- "reqwest",
- "serde",
- "serde_json",
- "thiserror 1.0.69",
- "tokio",
- "tokio-test",
- "tokio-tungstenite",
- "url",
- "uuid",
- "wasm-bindgen",
- "wasm-bindgen-futures",
- "web-sys",
-]
-
-[[package]]
-name = "kairos-gateway"
-version = "0.2.13"
-dependencies = [
- "actix-governor",
- "actix-web",
- "chrono",
- "env_logger",
- "kairos-rs",
- "log",
- "tempfile",
- "tokio",
-]
-
-[[package]]
-name = "kairos-rs"
-version = "0.2.13"
-dependencies = [
- "actix-governor",
- "actix-web",
- "actix-ws 0.2.5",
- "ahash",
- "base64",
- "chrono",
- "env_logger",
- "futures",
- "futures-util",
- "hex",
- "hickory-proto",
- "jsonwebtoken",
- "log",
- "once_cell",
- "rand 0.8.5",
- "regex",
- "reqwest",
- "serde",
- "serde_json",
- "suppaftp",
- "tempfile",
- "thiserror 1.0.69",
- "tokio",
- "tokio-test",
- "tokio-tungstenite",
- "uuid",
-]
-
-[[package]]
-name = "kairos-ui"
-version = "0.2.11"
-dependencies = [
- "actix-files",
- "actix-web",
- "chrono",
- "console_error_panic_hook",
- "gloo-timers",
- "http 1.3.1",
- "leptos",
- "leptos_actix",
- "leptos_meta",
- "leptos_router",
- "reqwest",
- "serde",
- "serde_json",
- "urlencoding",
- "wasm-bindgen",
- "web-sys",
-]
-
-[[package]]
 name = "kv-log-macro"
 version = "1.0.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3349,6 +3235,120 @@ dependencies = [
  "syn 2.0.106",
  "syn_derive",
  "thiserror 2.0.16",
+]
+
+[[package]]
+name = "rusta-cli"
+version = "0.2.11"
+dependencies = [
+ "chrono",
+ "clap",
+ "colored",
+ "console",
+ "dialoguer",
+ "indicatif",
+ "log",
+ "reqwest",
+ "rusta-client",
+ "rusta-rs",
+ "serde",
+ "serde_json",
+ "tabled",
+ "thiserror 1.0.69",
+ "tokio",
+]
+
+[[package]]
+name = "rusta-client"
+version = "0.2.11"
+dependencies = [
+ "chrono",
+ "futures-util",
+ "gloo-net 0.5.0",
+ "js-sys",
+ "log",
+ "rand 0.8.5",
+ "reqwest",
+ "rusta-rs",
+ "serde",
+ "serde_json",
+ "thiserror 1.0.69",
+ "tokio",
+ "tokio-test",
+ "tokio-tungstenite",
+ "url",
+ "uuid",
+ "wasm-bindgen",
+ "wasm-bindgen-futures",
+ "web-sys",
+]
+
+[[package]]
+name = "rusta-gateway"
+version = "0.2.13"
+dependencies = [
+ "actix-governor",
+ "actix-web",
+ "chrono",
+ "env_logger",
+ "log",
+ "rusta-rs",
+ "tempfile",
+ "tokio",
+]
+
+[[package]]
+name = "rusta-rs"
+version = "0.2.13"
+dependencies = [
+ "actix-governor",
+ "actix-web",
+ "actix-ws 0.2.5",
+ "ahash",
+ "base64",
+ "chrono",
+ "env_logger",
+ "futures",
+ "futures-util",
+ "hex",
+ "hickory-proto",
+ "jsonwebtoken",
+ "log",
+ "once_cell",
+ "rand 0.8.5",
+ "regex",
+ "reqwest",
+ "serde",
+ "serde_json",
+ "suppaftp",
+ "tempfile",
+ "thiserror 1.0.69",
+ "tokio",
+ "tokio-test",
+ "tokio-tungstenite",
+ "uuid",
+]
+
+[[package]]
+name = "rusta-ui"
+version = "0.2.11"
+dependencies = [
+ "actix-files",
+ "actix-web",
+ "chrono",
+ "console_error_panic_hook",
+ "gloo-timers",
+ "http 1.3.1",
+ "leptos",
+ "leptos_actix",
+ "leptos_meta",
+ "leptos_router",
+ "reqwest",
+ "serde",
+ "serde_json",
+ "urlencoding",
+ "wasm-bindgen",
+ "web-sys",
 ]
 
 [[package]]

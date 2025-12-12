@@ -2,7 +2,7 @@
 
 ## Overview
 
-Kairos Gateway now supports WebSocket proxying, enabling real-time bidirectional communication between clients and backend WebSocket servers. The gateway acts as a transparent proxy, forwarding WebSocket messages in both directions while maintaining connection lifecycle management.
+Rusta Gateway now supports WebSocket proxying, enabling real-time bidirectional communication between clients and backend WebSocket servers. The gateway acts as a transparent proxy, forwarding WebSocket messages in both directions while maintaining connection lifecycle management.
 
 ## Features
 
@@ -135,7 +135,7 @@ ws.onmessage = (event) => {
 {
   "jwt": {
     "secret": "your-secret-key",
-    "issuer": "kairos-gateway",
+    "issuer": "Rusta-gateway",
     "audience": "websocket-clients"
   },
   "routers": [
@@ -296,7 +296,7 @@ bun run server.ts
 
 ```
 ┌─────────┐                 ┌─────────────┐                 ┌─────────┐
-│ Client  │                 │   Kairos    │                 │ Backend │
+│ Client  │                 │   Rusta    │                 │ Backend │
 │         │                 │   Gateway   │                 │         │
 └────┬────┘                 └──────┬──────┘                 └────┬────┘
      │                             │                             │
@@ -388,7 +388,7 @@ bun run server.ts
 4. Review gateway logs for connection errors
 
 ```bash
-RUST_LOG=debug cargo run --bin kairos-gateway
+RUST_LOG=debug cargo run --bin Rusta-gateway
 ```
 
 ### WebSocket Upgrade Fails

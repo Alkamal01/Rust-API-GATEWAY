@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-JWT Token Generator for Kairos-rs Gateway
+JWT Token Generator for Rusta-rs Gateway
 
 This script generates valid JWT tokens that match your current gateway configuration.
 """
@@ -11,7 +11,7 @@ from datetime import datetime, timedelta, timezone
 
 # Configuration from your config.json
 SECRET = "your-super-secure-jwt-secret-key-must-be-at-least-32-characters-long"
-ISSUER = "kairos-gateway"
+ISSUER = "Rusta-gateway"
 AUDIENCE = "api-clients"
 REQUIRED_CLAIMS = ["sub", "exp"]
 
@@ -71,7 +71,7 @@ def verify_token(token):
         return None
 
 def main():
-    print("🔑 Kairos-rs JWT Token Generator")
+    print("🔑 Rusta-rs JWT Token Generator")
     print("=" * 50)
     
     # Generate new token

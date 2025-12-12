@@ -2,7 +2,7 @@
   "version": 1,
   "jwt": {
     "secret": "your-super-secret-jwt-key-change-this-in-production",
-    "issuer": "kairos-gateway",
+    "issuer": "rusta-gateway",
     "audience": "api-clients",
     "required_claims": ["sub", "exp"]
   },

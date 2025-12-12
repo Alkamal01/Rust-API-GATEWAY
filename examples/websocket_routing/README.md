@@ -1,11 +1,11 @@
 # WebSocket Routing Example
 
-This example demonstrates how to use Kairos Gateway with WebSocket support using Docker.
+This example demonstrates how to use Rusta Gateway with WebSocket support using Docker.
 
 ## Architecture
 
 - **API WebSocket Server** (`api_websocket`): Backend WebSocket server running on port 3000
-- **Kairos Gateway** (`gateway`): API Gateway with WebSocket proxy running on port 5900
+- **Rusta Gateway** (`gateway`): API Gateway with WebSocket proxy running on port 5900
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ docker compose up
 
 This will:
 1. Build the WebSocket backend server locally
-2. Pull the pre-built `kairos-rs:main` gateway image from GitHub Container Registry
+2. Pull the pre-built `rusta:main` gateway image from GitHub Container Registry
 3. Start both services with proper networking
 
 **Note**: The multi-platform image supports both AMD64 (Intel/AMD) and ARM64 (Apple Silicon) architectures.
@@ -34,11 +34,11 @@ This will:
 If you want to build the gateway from source instead of using the pre-built image:
 
 ```sh
-# From the root of the kairos-rs repository
-docker build -t kairos-gateway-local .
+# From the root of the rusta repository
+docker build -t Rusta-gateway-local .
 
 # Then modify compose.yml to use the local image:
-# image: kairos-gateway-local
+# image: Rusta-gateway-local
 ```
 
 ## Testing the WebSocket Connection
@@ -72,8 +72,8 @@ bun run dev
 
 ### Run the gateway separately:
 ```sh
-# From the root of kairos-rs repository
-cargo run --bin kairos-gateway -- --config examples/websocket_routing/config.json
+# From the root of rusta repository
+cargo run --bin Rusta-gateway -- --config examples/websocket_routing/config.json
 ```
 
 Then open http://localhost:3000 in your browser.
@@ -131,7 +131,7 @@ Client (Browser/wscat)
     |
     | WebSocket: ws://localhost:5900/ws/chat
     v
-Kairos Gateway (Port 5900)
+Rusta Gateway (Port 5900)
     |
     | Proxies to: ws://api_websocket:3000/ws
     v

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Kairos-rs Development Startup Script
+# Rusta-rs Development Startup Script
 
 # Colors for output
 RED='\033[0;31m'
@@ -9,7 +9,7 @@ BLUE='\033[0;34m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
-echo -e "${BLUE}🚀 Starting Kairos-rs Development Environment${NC}"
+echo -e "${BLUE}🚀 Starting Rusta-rs Development Environment${NC}"
 echo ""
 
 # Check if cargo-leptos is installed
@@ -26,15 +26,15 @@ fi
 
 # Function to run gateway
 start_gateway() {
-    echo -e "${GREEN}📡 Starting Kairos Gateway on port 5900...${NC}"
+    echo -e "${GREEN}📡 Starting Rusta Gateway on port 5900...${NC}"
     cd "$(dirname "$0")"
-    cargo run --bin kairos-gateway
+    cargo run --bin rusta-gateway
 }
 
 # Function to run UI
 start_ui() {
-    echo -e "${GREEN}🎨 Starting Kairos UI on port 3000...${NC}"
-    cd "$(dirname "$0")/crates/kairos-ui"
+    echo -e "${GREEN}🎨 Starting Rusta UI on port 3000...${NC}"
+    cd "$(dirname "$0")/crates/Rusta-ui"
     
     # First, try to build the WASM version
     echo -e "${BLUE}📦 Building WASM components...${NC}"
@@ -72,7 +72,7 @@ start_ui() {
 
 # Function to show help
 show_help() {
-    echo "Kairos-rs Development Startup Script"
+    echo "Rusta-rs Development Startup Script"
     echo ""
     echo "Usage:"
     echo "  $0 [COMMAND]"

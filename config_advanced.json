@@ -2,9 +2,13 @@
   "version": 1,
   "jwt": {
     "secret": "your-super-secret-key-change-this-in-production-minimum-32-characters",
-    "issuer": "kairos-gateway",
+    "issuer": "rusta-gateway",
     "audience": "api-clients",
-    "required_claims": ["sub", "exp", "iat"]
+    "required_claims": [
+      "sub",
+      "exp",
+      "iat"
+    ]
   },
   "rate_limit": {
     "strategy": "PerIPAndRoute",
@@ -13,7 +17,7 @@
     "burst_allowance": 50,
     "window_type": "SlidingWindow",
     "enable_redis": false,
-    "redis_key_prefix": "kairos_rl"
+    "redis_key_prefix": "Rusta_rl"
   },
   "routers": [
     {
@@ -22,7 +26,9 @@
       "port": 80,
       "external_path": "/api/legacy/get",
       "internal_path": "/get",
-      "methods": ["GET"],
+      "methods": [
+        "GET"
+      ],
       "auth_required": false
     },
     {
@@ -42,14 +48,20 @@
       "load_balancing_strategy": "round_robin",
       "external_path": "/api/users/{id}",
       "internal_path": "/json",
-      "methods": ["GET"],
+      "methods": [
+        "GET"
+      ],
       "auth_required": false,
       "retry": {
         "max_retries": 3,
         "initial_backoff_ms": 100,
         "max_backoff_ms": 5000,
         "backoff_multiplier": 2.0,
-        "retry_on_status_codes": [502, 503, 504],
+        "retry_on_status_codes": [
+          502,
+          503,
+          504
+        ],
         "retry_on_connection_error": true
       }
     },
@@ -70,14 +82,20 @@
       "load_balancing_strategy": "weighted",
       "external_path": "/api/weighted/test",
       "internal_path": "/anything",
-      "methods": ["GET", "POST"],
+      "methods": [
+        "GET",
+        "POST"
+      ],
       "auth_required": false,
       "retry": {
         "max_retries": 2,
         "initial_backoff_ms": 50,
         "max_backoff_ms": 2000,
         "backoff_multiplier": 2.0,
-        "retry_on_status_codes": [503, 504],
+        "retry_on_status_codes": [
+          503,
+          504
+        ],
         "retry_on_connection_error": true
       }
     },
@@ -93,7 +111,9 @@
       "load_balancing_strategy": "ip_hash",
       "external_path": "/api/session/{id}",
       "internal_path": "/uuid",
-      "methods": ["GET"],
+      "methods": [
+        "GET"
+      ],
       "auth_required": false
     },
     {
@@ -108,7 +128,9 @@
       "load_balancing_strategy": "random",
       "external_path": "/api/random/test",
       "internal_path": "/delay/1",
-      "methods": ["GET"],
+      "methods": [
+        "GET"
+      ],
       "auth_required": false
     }
   ]

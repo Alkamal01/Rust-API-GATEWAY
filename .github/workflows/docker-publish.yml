@@ -65,7 +65,7 @@ jobs:
       - name: Extract version from Cargo.toml
         id: cargo_version
         run: |
-          VERSION=$(grep -m1 '^version = ' crates/kairos-gateway/Cargo.toml | cut -d'"' -f2)
+          VERSION=$(grep -m1 '^version = ' crates/rusta-gateway/Cargo.toml | cut -d'"' -f2)
           echo "version=$VERSION" >> $GITHUB_OUTPUT
           echo "Extracted version: $VERSION"
 
